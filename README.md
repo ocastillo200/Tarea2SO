@@ -25,9 +25,5 @@ g++ main.cpp circularQ.cpp vmSimulator.cpp
 ```bash
 ./a.out
 ```
-5. Opcional (en caso de errores de ejecución):
-Si el programa no realiza de manera correcta los comandos de creación de archivos como favs --crear, quizás sea necesario ejecutarlo con permisos adicionales de la siguiente forma:
-```bash
-sudo ./a.out
-```
+
 
