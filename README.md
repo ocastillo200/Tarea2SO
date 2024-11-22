@@ -12,18 +12,20 @@ Este proyecto consiste en la implementación de dos simuladores, el primero es u
 ```bash
 git clone https://github.com/ocastillo200/Tarea2SO.git
 ```
-2. Actualizar paquetes
+2. Para compilar el simulador de memoria virtual:
 ```bash
-sudo apt update
-sudo apt install build-essential
+g++ Simulador_de_Memoria_Virtual.cpp -o mvirtual
 ```
-3. Compilar el código (verificar que se está situado en la carpeta del repositorio)
+Y para ejecutar el programa:
 ```bash
-g++ main.cpp circularQ.cpp vmSimulator.cpp
+./mvirtual -m <frames> -a <algorithm> -f <file>
 ```
-4. Ejecutar el programa
+3. Para compilar el simulador de Productor-Consumidor:
 ```bash
-./a.out
+g++ Simulador_Productores_Consumidores.cpp -o simulapc 
 ```
-
+Y para ejecutar el programa:
+```bash
+./simulapc -p <producers> -c <consumers> -s <queue_size> -t <wait_time>
+```
 
