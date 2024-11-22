@@ -11,18 +11,17 @@
 
 using namespace std;
 
-// Clase para la simulación de memoria virtual
 class VirtualMemorySimulator
 {
 private:
     int frames;
     string replacement_algo;
     vector<int> page_references;
-    unordered_map<int, int> page_table; // Cambiado para almacenar índices directamente
+    unordered_map<int, int> page_table;
     list<int> lru_cache;
     queue<int> fifo_queue;
     vector<pair<int, bool>> clock_vector;
-    size_t clock_hand; // Puntero al índice del vector
+    size_t clock_hand;
     int page_faults;
 
     void loadReferences(const string &file_name)
@@ -50,7 +49,7 @@ private:
             page_table.erase(victim);
         }
         fifo_queue.push(page);
-        page_table[page] = page; // Almacena el valor directamente
+        page_table[page] = page;
     }
 
     void replaceLRU(int page)
@@ -62,7 +61,7 @@ private:
             page_table.erase(victim);
         }
         lru_cache.push_front(page);
-        page_table[page] = page; // Almacena el valor directamente
+        page_table[page] = page;
     }
 
     void replaceClock(int page)
@@ -108,7 +107,7 @@ private:
             }
             page_table.erase(victim_index);
         }
-        page_table[page] = page; // Almacena el valor directamente
+        page_table[page] = page;
     }
 
 public:
